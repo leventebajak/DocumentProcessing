@@ -1,6 +1,6 @@
-**/.idea
+**/.idea/
+**/chroma*/
+**/index*/
+**/data/
 **/*.pdf
-**/chroma*
-**/index*
-**/data
 **/*.ipynb
