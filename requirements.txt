@@ -1,9 +1,7 @@
-jupyter~=1.1.1
+pymupdf~=1.24.12
+chromadb~=0.5.20
 llama_index~=0.11.20
 llama-index-readers-file~=0.2.2
 llama-index-llms-ollama~=0.3.4
 llama-index-embeddings-ollama~=0.3.1
 llama-index-vector-stores-chroma~=0.3.0
-trulens_eval~=1.1.0
-pymupdf~=1.24.12
-chromadb~=0.5.20

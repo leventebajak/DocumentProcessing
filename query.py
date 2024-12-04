@@ -1,22 +1,17 @@
 from llama_index.core import get_response_synthesizer
-from llama_index.core.indices.vector_store import VectorIndexRetriever
 from llama_index.core.query_engine import RetrieverQueryEngine
 from llama_index.core.response_synthesizers import ResponseMode
 
 from settings import llm
-from indexing import load_index
+from indexing import load_index, get_retreiver
 
-print("Loading index from storage...")
 index = load_index()
 
 query_str = input("Query: ")
 
-print("Generating response...")
+print("\nGenerating response...")
 
-retriever = VectorIndexRetriever(
-    index=index,
-    similarity_top_k=10,
-)
+retriever = get_retreiver(index, verbose=True)
 
 response_synthesizer = get_response_synthesizer(
     response_mode=ResponseMode.TREE_SUMMARIZE,
@@ -30,4 +25,7 @@ query_engine = RetrieverQueryEngine(
 )
 
 streaming_response = query_engine.query(query_str)
+
+print("Response: ")
+
 streaming_response.print_response_stream()
