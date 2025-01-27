@@ -1,6 +1,7 @@
 from llama_index.core import get_response_synthesizer
-from llama_index.core.evaluation import FaithfulnessEvaluator, RelevancyEvaluator
 from llama_index.core.query_engine import RetrieverQueryEngine
+from llama_index.core.evaluation import FaithfulnessEvaluator
+# from llama_index.core.evaluation import RelevancyEvaluator
 
 from settings import llm
 from indexing import load_index, get_retreiver
@@ -18,8 +19,7 @@ query_engine = RetrieverQueryEngine(
 evaluator = FaithfulnessEvaluator(llm=llm)
 # evaluator = RelevancyEvaluator(llm=llm)
 
-query = "What does BERT stand for?"
-print("Query:", query)
+query = input("Query: ")
 
 response = query_engine.query(query)
 print("Response:", response)
