@@ -1,12 +1,11 @@
-from llama_index.core.retrievers import AutoMergingRetriever
-from llama_index.core.storage.docstore import SimpleDocumentStore
-
 import chromadb
 from pathlib import Path
 from httpx import ConnectError
 from argparse import ArgumentParser
 from llama_index.core import SimpleDirectoryReader, StorageContext, VectorStoreIndex, Document
 from llama_index.core.node_parser import SentenceSplitter, HierarchicalNodeParser
+from llama_index.core.retrievers import AutoMergingRetriever
+from llama_index.core.storage.docstore import SimpleDocumentStore
 from llama_index.readers.file import PyMuPDFReader
 from llama_index.vector_stores.chroma import ChromaVectorStore
 

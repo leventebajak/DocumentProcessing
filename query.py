@@ -11,7 +11,7 @@ query_str = input("Query: ")
 
 print("\nGenerating response...")
 
-retriever = get_retreiver(index, verbose=True)
+retriever = get_retreiver(index, verbose=False)
 
 response_synthesizer = get_response_synthesizer(
     response_mode=ResponseMode.TREE_SUMMARIZE,
