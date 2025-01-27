@@ -11,6 +11,16 @@ To install the required dependencies, run the following command:
 pip install -r requirements.txt
 ```
 
+Download Ollama from https://ollama.com/download and run these commands to download the models:
+
+```bash
+ollama pull nomic-embed-text
+```
+
+```bash
+ollama run llama3.2
+```
+
 ## Files and Directories Indexing
 
 Running the `indexing.py` script from the terminal allows you to index files and directories, making them ready for search and retrieval.
